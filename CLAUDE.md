@@ -38,7 +38,7 @@ Next.js 16 App Router with TypeScript and Tailwind CSS v4:
 ## External Dependencies
 
 - Google Fonts: Titillium Web, Rajdhani, Electrolize, Share Tech Mono
-- tailwindcss-animate for animation utilities
+- tw-animate-css for animation utilities (Tailwind v4 compatible)
 
 ## Legacy
 
