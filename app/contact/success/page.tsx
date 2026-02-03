@@ -15,8 +15,8 @@ export default function ContactSuccessPage() {
                         <h1 className="text-2xl font-mono text-cyber-blue mb-6">TRANSMISSION COMPLETE</h1>
 
                         <div className="text-foreground/90 space-y-4 mb-8">
-                            <p>Your message has been successfully transmitted to our system.</p>
-                            <p>We will respond to your inquiry as soon as possible.</p>
+                            <p>メッセージの送信が完了しました。</p>
+                            <p>お問い合わせいただきありがとうございます。内容を確認の上、折り返しご連絡いたします。</p>
                         </div>
 
                         <div className="flex justify-center mb-10">

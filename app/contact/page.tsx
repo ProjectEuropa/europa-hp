@@ -39,10 +39,30 @@ export default function ContactPage() {
         try {
             const realForm = document.getElementById('contactForm') as HTMLFormElement;
             const formData = new FormData(realForm);
-            const response = await fetch('/contact', {
-                method: 'POST',
-                body: formData,
-            });
+            const fileInput = formData.get('file') as File | null;
+            const hasFile = fileInput && fileInput.size > 0;
+
+            let response: Response;
+            if (hasFile) {
+                // ファイル添付ありの場合は multipart/form-data で送信
+                response = await fetch('/__forms.html', {
+                    method: 'POST',
+                    body: formData,
+                });
+            } else {
+                // テキストのみの場合は公式ドキュメントの推奨形式で送信
+                const params = new URLSearchParams();
+                for (const [key, value] of formData.entries()) {
+                    if (typeof value === 'string') {
+                        params.append(key, value);
+                    }
+                }
+                response = await fetch('/__forms.html', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: params.toString(),
+                });
+            }
             if (!response.ok) throw new Error('送信に失敗しました');
             router.push('/contact/success');
         } catch (error) {
@@ -79,11 +99,6 @@ export default function ContactPage() {
                     <form
                         id="contactForm"
                         name="contact"
-                        method="POST"
-                        data-netlify="true"
-                        netlify-honeypot="bot-field"
-                        action="/contact/success"
-                        encType="multipart/form-data"
                         onSubmit={handleSubmit}
                         className="space-y-6 max-w-2xl mx-auto"
                     >
