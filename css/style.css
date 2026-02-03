@@ -1102,7 +1102,7 @@ footer {
 
     /* モバイルナビゲーション */
     .mobile-nav {
-        display: none;
+        display: flex;
         position: fixed;
         top: 0;
         left: 0;
@@ -1114,12 +1114,14 @@ footer {
         justify-content: center;
         align-items: center;
         gap: 20px;
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.15s ease, visibility 0.15s ease;
     }
 
     .mobile-nav.active {
-        display: flex;
+        opacity: 1;
+        visibility: visible;
     }
 
     .mobile-nav a {
