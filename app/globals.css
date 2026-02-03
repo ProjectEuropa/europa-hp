@@ -140,9 +140,9 @@ body {
 
 /* Utilities for Cyberpunk effects */
 @utility text-glow {
-  text-shadow: 0 0 12px var(--cyber-blue);
+  text-shadow: 0 0 12px var(--color-cyber-blue);
 }
 
 @utility border-glow {
-  box-shadow: 0 0 10px var(--cyber-blue);
+  box-shadow: 0 0 10px var(--color-cyber-blue);
 }

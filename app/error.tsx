@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 import CyberCard from '@/components/ui/CyberCard';
 
-export default function Error({
+export default function ErrorBoundary({
     error,
     reset,
 }: {
