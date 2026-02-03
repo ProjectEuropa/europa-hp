@@ -90,7 +90,7 @@ export default function AboutPage() {
                         <h3 className="text-xl font-bold text-cyber-blue mb-1">M2</h3>
                         <p className="text-sm text-cyber-light font-mono mb-4 border-b border-cyber-blue/20 pb-2 inline-block">Lead Developer & Cloud Architect</p>
                         <p className="text-sm mb-4 leading-relaxed">AWSおよびGoogle Cloudの認定資格を保持するクラウドスペシャリスト。複層的なインフラ設計から効率的なアプリケーション開発まで幅広く対応。</p>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-2 justify-center">
                             {['AWS', 'Google Cloud', 'DevOps', 'Backend', 'Terraform', 'CDK', 'PHP', 'Laravel', 'Ruby', 'Ruby on Rails'].map(skill => (
                                 <span key={skill} className="text-xs px-2 py-1 bg-cyber-blue/10 border border-cyber-blue/30 text-cyber-blue rounded font-mono">
                                     {skill}
@@ -109,7 +109,7 @@ export default function AboutPage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {/* Strength 1 */}
                         <div className="bg-cyber-blue/5 border border-cyber-blue/20 p-6 rounded hover:border-cyber-blue transition-colors duration-300">
-                            <div className="w-10 h-10 text-cyber-blue mb-4">
+                            <div className="w-10 h-10 text-cyber-blue mb-4 mx-auto">
                                 <svg viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
                                 </svg>
@@ -120,7 +120,7 @@ export default function AboutPage() {
 
                         {/* Strength 2 */}
                         <div className="bg-cyber-blue/5 border border-cyber-blue/20 p-6 rounded hover:border-cyber-blue transition-colors duration-300">
-                            <div className="w-10 h-10 text-cyber-blue mb-4">
+                            <div className="w-10 h-10 text-cyber-blue mb-4 mx-auto">
                                 <svg viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M10.59,13.41C11,13.8 11,14.44 10.59,14.83C10.2,15.22 9.56,15.22 9.17,14.83C6.22,11.88 6.22,7.12 9.17,4.17C12.12,1.22 16.88,1.22 19.83,4.17C22.78,7.12 22.78,11.88 19.83,14.83C19.44,15.22 18.8,15.22 18.41,14.83C18,14.44 18,13.8 18.41,13.41C20.59,11.23 20.59,7.77 18.41,5.59C16.23,3.41 12.77,3.41 10.59,5.59C8.41,7.77 8.41,11.23 10.59,13.41M13.41,9.17C13.8,8.78 14.44,8.78 14.83,9.17C17.78,12.12 17.78,16.88 14.83,19.83C11.88,22.78 7.12,22.78 4.17,19.83C1.22,16.88 1.22,12.12 4.17,9.17C4.56,8.78 5.2,8.78 5.59,9.17C6,9.56 6,10.2 5.59,10.59C3.41,12.77 3.41,16.23 5.59,18.41C7.77,20.59 11.23,20.59 13.41,18.41C15.59,16.23 15.59,12.77 13.41,10.59C13,10.2 13,9.56 13.41,9.17Z" />
                                 </svg>
@@ -131,7 +131,7 @@ export default function AboutPage() {
 
                         {/* Strength 3 */}
                         <div className="bg-cyber-blue/5 border border-cyber-blue/20 p-6 rounded hover:border-cyber-blue transition-colors duration-300">
-                            <div className="w-10 h-10 text-cyber-blue mb-4">
+                            <div className="w-10 h-10 text-cyber-blue mb-4 mx-auto">
                                 <svg viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M16,4H20V8H18V6H16V4M4,4H8V6H6V8H4V4M20,16V20H16V18H18V16H20M6,18V16H4V20H8V18H6M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8M12,10A2,2 0 0,0 10,12A2,2 0 0,0 12,14A2,2 0 0,0 14,12A2,2 0 0,0 12,10Z" />
                                 </svg>
@@ -149,12 +149,12 @@ export default function AboutPage() {
                     <SectionTitle title="Training & Education" subtitle="研修・教育" />
                     <div className="space-y-6">
                         <div className="border border-cyber-blue/30 p-5 rounded bg-cyber-blue/5">
-                            <div className="flex justify-between items-start mb-2">
+                            <div className="text-center mb-2">
                                 <h3 className="text-lg font-bold text-cyber-blue">大手企業向け新卒エンジニア研修講師</h3>
-                                <span className="text-xs font-mono text-cyber-light bg-cyber-blue/10 px-2 py-1 rounded">2024-現在</span>
+                                <span className="text-xs font-mono text-cyber-light bg-cyber-blue/10 px-2 py-1 rounded mt-1 inline-block">2024-現在</span>
                             </div>
                             <p className="text-sm mb-3 text-foreground/80">大手重工業系企業、大手通信企業、大手データ分析企業、大手飲料メーカーなど、複数の大手企業にて新卒エンジニア向けの技術研修を担当。</p>
-                            <div className="flex flex-wrap gap-2">
+                            <div className="flex flex-wrap gap-2 justify-center">
                                 {['AWS', '生成AI'].map(skill => (
                                     <span key={skill} className="text-xs px-2 py-1 bg-cyber-blue/10 border border-cyber-blue/30 text-cyber-blue rounded font-mono">
                                         {skill}
@@ -173,21 +173,33 @@ export default function AboutPage() {
                     <div className="space-y-6">
 
                         <div className="border border-cyber-blue/30 p-5 rounded bg-cyber-blue/5">
-                            <div className="flex justify-between items-start mb-2">
+                            <div className="text-center mb-2">
                                 <h3 className="text-lg font-bold text-cyber-blue">消費者向け生活支援サービスプラットフォームの開発・運用</h3>
-                                <span className="text-xs font-mono text-cyber-light bg-cyber-blue/10 px-2 py-1 rounded">2025-現在</span>
+                                <span className="text-xs font-mono text-cyber-light bg-cyber-blue/10 px-2 py-1 rounded mt-1 inline-block">2025-現在</span>
                             </div>
                             <p className="text-sm mb-3 text-foreground/80">Google Cloudを基盤とした消費者向け生活支援サービスの新規開発および基幹システムの運用保守。CI/CDパイプラインの構築、TerraformによるIaC、生成AIを活用したPR自動レビュー機能、セキュリティ対策などを実施。</p>
-                            <div className="text-xs font-mono text-cyber-light opacity-80">Cloud Run / Compute Engine / Terraform / GitHub Actions / Laravel 12.x / PHP</div>
+                            <div className="flex flex-wrap gap-2 justify-center">
+                                {['Cloud Run', 'Compute Engine', 'Terraform', 'GitHub Actions', 'Laravel 12.x', 'PHP'].map(skill => (
+                                    <span key={skill} className="text-xs px-2 py-1 bg-cyber-blue/10 border border-cyber-blue/30 text-cyber-blue rounded font-mono">
+                                        {skill}
+                                    </span>
+                                ))}
+                            </div>
                         </div>
 
                         <div className="border border-cyber-blue/30 p-5 rounded bg-cyber-blue/5">
-                            <div className="flex justify-between items-start mb-2">
+                            <div className="text-center mb-2">
                                 <h3 className="text-lg font-bold text-cyber-blue">高性能ビッグデータ検索エンジンの開発</h3>
-                                <span className="text-xs font-mono text-cyber-light bg-cyber-blue/10 px-2 py-1 rounded">2024-2025</span>
+                                <span className="text-xs font-mono text-cyber-light bg-cyber-blue/10 px-2 py-1 rounded mt-1 inline-block">2024-2025</span>
                             </div>
                             <p className="text-sm mb-3 text-foreground/80">AWS CDKとAurora MySQLを活用し、数十万件のデータベースレコードを1〜2秒で検索できる高速システムを実現。複数のデータソースを統合し、インデックス最適化とキャッシュ戦略を駆使して応答時間を劇的に改善。</p>
-                            <div className="text-xs font-mono text-cyber-light opacity-80">AWS ECS / Aurora MySQL / AWS CDK / Laravel 11.x / Next.js 13.x / Redis</div>
+                            <div className="flex flex-wrap gap-2 justify-center">
+                                {['AWS ECS', 'Aurora MySQL', 'AWS CDK', 'Laravel 11.x', 'Next.js 13.x', 'Redis'].map(skill => (
+                                    <span key={skill} className="text-xs px-2 py-1 bg-cyber-blue/10 border border-cyber-blue/30 text-cyber-blue rounded font-mono">
+                                        {skill}
+                                    </span>
+                                ))}
+                            </div>
                         </div>
 
                         <div className="text-center mt-6">

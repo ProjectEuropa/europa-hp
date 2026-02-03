@@ -277,7 +277,7 @@ export default function SkillPage() {
                         <div className="border-b border-cyber-blue/20 pb-6 last:border-b-0 last:pb-0">
                             <h3 className="text-lg font-bold text-cyber-blue mb-2">サーバーサイド開発</h3>
                             <p className="text-sm text-foreground/80 mb-3">PHP/Laravel、Ruby/Ruby on Rails環境において、事業・要件のフェーズに合わせたアプリケーションのアーキテクチャ選定から設計実装まで対応可能です。</p>
-                            <div className="flex flex-wrap gap-2">
+                            <div className="flex flex-wrap gap-2 justify-center">
                                 {['PHP', 'Laravel', 'Ruby', 'Ruby on Rails', 'API Design', 'Architecture Design'].map(tag => (
                                     <span key={tag} className="text-xs px-2 py-1 bg-cyber-blue/10 border border-cyber-blue/30 text-cyber-blue rounded font-mono">{tag}</span>
                                 ))}
@@ -288,7 +288,7 @@ export default function SkillPage() {
                         <div className="border-b border-cyber-blue/20 pb-6 last:border-b-0 last:pb-0">
                             <h3 className="text-lg font-bold text-cyber-blue mb-2">フロントエンド開発</h3>
                             <p className="text-sm text-foreground/80 mb-3">Vue.js/React.js/TypeScript環境において、コンポーネント設計や実装まで対応可能です。</p>
-                            <div className="flex flex-wrap gap-2">
+                            <div className="flex flex-wrap gap-2 justify-center">
                                 {['Vue.js', 'Nuxt.js', 'React.js', 'Next.js', 'TypeScript', 'Component Design', 'SPA', 'PWA'].map(tag => (
                                     <span key={tag} className="text-xs px-2 py-1 bg-cyber-blue/10 border border-cyber-blue/30 text-cyber-blue rounded font-mono">{tag}</span>
                                 ))}
@@ -299,7 +299,7 @@ export default function SkillPage() {
                         <div className="border-b border-cyber-blue/20 pb-6 last:border-b-0 last:pb-0">
                             <h3 className="text-lg font-bold text-cyber-blue mb-2">インフラ構築・運用</h3>
                             <p className="text-sm text-foreground/80 mb-3">AWS/Google Cloud/Terraform、EC2/ECS/GCE/Cloud Runなどを利用した本番環境の設計や構築まで対応可能です。</p>
-                            <div className="flex flex-wrap gap-2">
+                            <div className="flex flex-wrap gap-2 justify-center">
                                 {['AWS', 'Google Cloud', 'EC2', 'ECS', 'GCE', 'Cloud Run', 'Terraform', 'CloudFormation', 'CDK', 'Ansible', 'IaC', 'Docker'].map(tag => (
                                     <span key={tag} className="text-xs px-2 py-1 bg-cyber-blue/10 border border-cyber-blue/30 text-cyber-blue rounded font-mono">{tag}</span>
                                 ))}
@@ -310,7 +310,7 @@ export default function SkillPage() {
                         <div className="border-b border-cyber-blue/20 pb-6 last:border-b-0 last:pb-0">
                             <h3 className="text-lg font-bold text-cyber-blue mb-2">サーバー監視</h3>
                             <p className="text-sm text-foreground/80 mb-3">Datadog/NewRelic/Mackerel/Sentry、標準的なAPM対応からエラー通知まで対応可能です。</p>
-                            <div className="flex flex-wrap gap-2">
+                            <div className="flex flex-wrap gap-2 justify-center">
                                 {['Datadog', 'NewRelic', 'CloudWatch', 'Mackerel', 'Sentry', 'APM', 'SigNoz'].map(tag => (
                                     <span key={tag} className="text-xs px-2 py-1 bg-cyber-blue/10 border border-cyber-blue/30 text-cyber-blue rounded font-mono">{tag}</span>
                                 ))}
@@ -321,7 +321,7 @@ export default function SkillPage() {
                         <div className="border-b border-cyber-blue/20 pb-6 last:border-b-0 last:pb-0">
                             <h3 className="text-lg font-bold text-cyber-blue mb-2">CI/CD</h3>
                             <p className="text-sm text-foreground/80 mb-3">GitHub Actions、Unitテスト自動化からE2Eテストの自動化、EC2/ECS/Cloud Runデプロイの自動化まで対応可能です。</p>
-                            <div className="flex flex-wrap gap-2">
+                            <div className="flex flex-wrap gap-2 justify-center">
                                 {['GitHub Actions', 'Circle CI', 'Jenkins', 'CI/CD', 'Automatic Testing', 'E2E Testing', 'Auto Deployment', 'Cloud Run'].map(tag => (
                                     <span key={tag} className="text-xs px-2 py-1 bg-cyber-blue/10 border border-cyber-blue/30 text-cyber-blue rounded font-mono">{tag}</span>
                                 ))}
@@ -332,7 +332,7 @@ export default function SkillPage() {
                         <div className="border-b border-cyber-blue/20 pb-6 last:border-b-0 last:pb-0">
                             <h3 className="text-lg font-bold text-cyber-blue mb-2">生成AI活用・開発効率化</h3>
                             <p className="text-sm text-foreground/80 mb-3">Claude Codeなどの生成AIを活用した開発効率化、PR自動レビュー、E2Eテスト自動修復パイプラインの構築が可能です。</p>
-                            <div className="flex flex-wrap gap-2">
+                            <div className="flex flex-wrap gap-2 justify-center">
                                 {['Claude Code', 'AI PR Review', 'Auto Repair Pipeline', 'Prompt Engineering'].map(tag => (
                                     <span key={tag} className="text-xs px-2 py-1 bg-cyber-blue/10 border border-cyber-blue/30 text-cyber-blue rounded font-mono">{tag}</span>
                                 ))}
