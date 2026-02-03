@@ -42,12 +42,12 @@ export default function Home() {
           <CyberCard title="Proven Track Record">
             <SectionTitle title="Key Achievements" subtitle="主な実績" />
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 text-left">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 text-center">
               {/* Project 1 */}
-              <div className="border border-cyber-blue/30 p-5 hover:border-cyber-blue transition-colors duration-300 bg-cyber-black/40">
-                <h3 className="text-cyber-blue font-bold mb-2">コンシューマー向けライフスタイルプラットフォーム</h3>
-                <p className="text-sm mb-3">Google Cloud & Laravelを基盤とした大規模ユーザー向けプラットフォーム開発。高いスケーラビリティを実現するためCI/CD、IaCなどモダンなDevOpsを導入。</p>
-                <div className="flex flex-wrap gap-2 justify-center border-t border-cyber-blue/20 pt-3">
+              <div className="border border-cyber-blue/30 p-5 hover:border-cyber-blue transition-colors duration-300 bg-cyber-black/40 flex flex-col">
+                <h3 className="text-cyber-blue font-bold mb-2">ライフスタイルプラットフォーム</h3>
+                <p className="text-sm mb-3 flex-grow">Google Cloud & Laravelを基盤とした大規模ユーザー向けプラットフォーム開発。CI/CD、IaCなどモダンなDevOpsを導入。</p>
+                <div className="flex flex-wrap gap-2 justify-center border-t border-cyber-blue/20 pt-3 mt-auto">
                   {['Cloud Run', 'Terraform', 'GitHub Actions', 'Laravel 12.x'].map(tag => (
                     <span key={tag} className="text-xs px-2 py-1 bg-cyber-blue/10 border border-cyber-blue/30 text-cyber-blue rounded font-mono">{tag}</span>
                   ))}
@@ -55,21 +55,21 @@ export default function Home() {
               </div>
 
               {/* Project 2 */}
-              <div className="border border-cyber-blue/30 p-5 hover:border-cyber-blue transition-colors duration-300 bg-cyber-black/40">
+              <div className="border border-cyber-blue/30 p-5 hover:border-cyber-blue transition-colors duration-300 bg-cyber-black/40 flex flex-col">
                 <h3 className="text-cyber-blue font-bold mb-2">大規模データ検索エンジン</h3>
-                <p className="text-sm mb-3">AWS ECS & Auroraを活用し、数百万件のレコードをサブ秒レイテンシで処理する高性能なエンタープライズ向け検索システムを開発。</p>
-                <div className="flex flex-wrap gap-2 justify-center border-t border-cyber-blue/20 pt-3">
-                  {['AWS ECS', 'Aurora', 'AWS CDK', 'Next.js'].map(tag => (
+                <p className="text-sm mb-3 flex-grow">AWS ECS & Auroraを活用し、数百万件のレコードをサブ秒レイテンシで処理する高性能な検索システムを開発。</p>
+                <div className="flex flex-wrap gap-2 justify-center border-t border-cyber-blue/20 pt-3 mt-auto">
+                  {['AWS ECS', 'Aurora', 'AWS CDK', 'Next.js', 'Laravel 11.x'].map(tag => (
                     <span key={tag} className="text-xs px-2 py-1 bg-cyber-blue/10 border border-cyber-blue/30 text-cyber-blue rounded font-mono">{tag}</span>
                   ))}
                 </div>
               </div>
 
               {/* Project 3 */}
-              <div className="border border-cyber-blue/30 p-5 hover:border-cyber-blue transition-colors duration-300 bg-cyber-black/40">
+              <div className="border border-cyber-blue/30 p-5 hover:border-cyber-blue transition-colors duration-300 bg-cyber-black/40 flex flex-col">
                 <h3 className="text-cyber-blue font-bold mb-2">新卒技術研修講師</h3>
-                <p className="text-sm mb-3">新卒エンジニア向けの技術研修講師として、クラウドアーキテクチャ、バックエンド開発、DevOpsのベストプラクティスを指導。</p>
-                <div className="flex flex-wrap gap-2 justify-center border-t border-cyber-blue/20 pt-3">
+                <p className="text-sm mb-3 flex-grow">新卒エンジニア向けの技術研修講師として、クラウドアーキテクチャやDevOpsのベストプラクティスを指導。</p>
+                <div className="flex flex-wrap gap-2 justify-center border-t border-cyber-blue/20 pt-3 mt-auto">
                   {['Technical Leadership', 'Mentoring', 'Curriculum Design'].map(tag => (
                     <span key={tag} className="text-xs px-2 py-1 bg-cyber-blue/10 border border-cyber-blue/30 text-cyber-blue rounded font-mono">{tag}</span>
                   ))}
