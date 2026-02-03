@@ -695,9 +695,10 @@ header.scrolled {
     z-index: 2;
     text-align: center;
     /* 中央揃えに変更 */
-    min-width: 700px;
+    width: 100%;
     max-width: 700px;
     padding: 30px;
+    box-sizing: border-box;
     background: transparent;
 }
 
@@ -1024,7 +1025,6 @@ footer {
     }
 
     .hero-content {
-        min-width: auto;
         max-width: 100%;
     }
 
