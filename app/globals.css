@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+@theme {
+  --color-background: #021114;
+  --color-foreground: #7efbfd;
+
+  --color-cyber-black: #021114;
+  --color-cyber-blue: #26dafd;
+  --color-cyber-light: #acf9fb;
+  --color-cyber-header: #010b0e;
+  --color-cyber-content: #041216;
+  --color-cyber-error: #ff1a4b;
+
+  --font-sans: var(--font-titillium), ui-sans-serif, system-ui;
+  --font-mono: var(--font-electrolize), ui-monospace, SFMono-Regular, monospace;
+
+  --animate-blink: blink 1s step-end infinite;
+  --animate-frame-appear: frame-appear 0.5s both;
+  --animate-text-appear: text-appear 0.7s both;
+  --animate-line-appear: line-appear 0.6s both;
+  --animate-header-appear: header-appear 0.5s both;
+  --animate-typing: typing 3.5s steps(40, end) forwards;
+  --animate-scanline: scanline 8s linear infinite;
+  --animate-rotate: rotate 60s linear infinite;
+
+  @keyframes blink {
+
+    from,
+    to {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes frame-appear {
+    0% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes text-appear {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes line-appear {
+    0% {
+      width: 0;
+    }
+
+    100% {
+      width: 100%;
+    }
+  }
+
+  @keyframes header-appear {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes scanline {
+    0% {
+      transform: translateY(-100%);
+    }
+
+    100% {
+      transform: translateY(100%);
+    }
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+:root {
+  --background: #021114;
+  --foreground: #7efbfd;
+  --cyber-blue: #26dafd;
+  --cyber-shadow: 0 0 20px rgba(38, 218, 253, 0.4);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+  letter-spacing: 0.5px;
+  font-weight: 300;
+
+  background-image:
+    radial-gradient(rgba(38, 218, 253, 0.05) 1px, transparent 1px),
+    radial-gradient(rgba(38, 218, 253, 0.05) 1px, transparent 1px),
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="600" viewBox="0 0 1000 600"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.5 0"/></filter><rect width="1000" height="600" filter="url(%23noise)" opacity="0.08"/></svg>');
+  background-size: 30px 30px, 30px 30px, 100% 100%;
+  background-position: 0 0, 15px 15px, 0 0;
+  background-attachment: fixed;
+}
+
+/* Utilities for Cyberpunk effects */
+@utility text-glow {
+  text-shadow: 0 0 12px var(--cyber-blue);
+}
+
+@utility border-glow {
+  box-shadow: 0 0 10px var(--cyber-blue);
+}

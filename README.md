@@ -1,33 +1,69 @@
-# Project Europa Website
+# Project Europa
 
-A space-themed website for Project Europa with contact form functionality integrated with Slack.
+サイバーパンク/SF テーマのポートフォリオサイト。フリーランス Web 開発・クラウドインフラ構築・技術研修サービスの紹介。
 
-## Features
+## Tech Stack
 
-- Responsive design with space-themed UI
-- Interactive contact form with modal confirmation
-- Slack integration for receiving contact form submissions
-- Animated background with stars and nebula effects
+- **Framework**: Next.js 16 (App Router)
+- **Language**: TypeScript 5
+- **UI**: React 19
+- **Styling**: Tailwind CSS v4 + カスタムCSSアニメーション
+- **Fonts**: Google Fonts (Titillium Web, Rajdhani, Electrolize, Share Tech Mono)
+- **Linter/Formatter**: Biome
 
+## Getting Started
 
-## Deployment
+```bash
+npm install
+npm run dev
+```
 
-This site can be deployed to any static hosting service like Netlify, Vercel, or GitHub Pages.
+http://localhost:3000 で開発サーバーが起動します。
 
-When deploying, make sure to set the environment variables in your hosting provider's settings.
+## Scripts
 
-## File Structure
+| コマンド | 説明 |
+|---------|------|
+| `npm run dev` | 開発サーバー起動 |
+| `npm run build` | プロダクションビルド |
+| `npm run start` | プロダクションサーバー起動 |
+| `npm run lint` | Biome lint + format チェック |
+| `npm run lint:fix` | Biome lint + format 自動修正 |
+| `npm run format` | Biome format 自動修正 |
 
-- `index.html` - Home page
-- `contact.html` - Contact page with form
-- `css/style.css` - All styles for the website
-- `js/main.js` - JavaScript functionality
-- `images/` - Image assets
+## Directory Structure
 
-## Browser Compatibility
+```
+app/
+├── layout.tsx          # ルートレイアウト (メタデータ・フォント・背景)
+├── page.tsx            # ホームページ
+├── globals.css         # Tailwind + カスタムテーマ・アニメーション
+├── not-found.tsx       # 404ページ
+├── about/page.tsx      # About ページ
+├── contact/
+│   ├── page.tsx        # お問い合わせフォーム
+│   └── success/page.tsx
+├── portfolio/page.tsx  # ポートフォリオ
+└── skill/page.tsx      # スキル・資格
 
-Tested and working in:
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+components/
+├── Navbar.tsx          # ナビゲーション (モバイル対応)
+├── Footer.tsx          # フッター
+├── StarField.tsx       # 星空背景アニメーション
+└── ui/
+    ├── CyberCard.tsx   # サイバーパンク風カード
+    ├── Planet.tsx       # 回転する惑星
+    └── SectionTitle.tsx # セクション見出し
+```
+
+## Design Theme
+
+- ダークベース (`#021114`) + シアンアクセント (`#26dafd`)
+- フレームコンポーネント (角装飾・グローライン)
+- タイピングアニメーション・スキャンライン効果
+- 星空背景・ノイズテクスチャ
+- バイリンガル (日本語メイン / 英語サブ)
+
+## Legacy
+
+移行前の静的HTML/CSS/JSサイトは `_legacy_backup/` に保管。
