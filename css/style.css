@@ -1176,6 +1176,88 @@ footer {
     .mobile-nav-close:hover {
         box-shadow: 0 0 10px rgba(38, 218, 253, 0.5);
     }
+
+    /* ヘッダー・ロゴのモバイル対応 */
+    .header {
+        padding: 10px 0;
+    }
+
+    .logo-container {
+        height: 60px;
+        margin-bottom: 5px;
+    }
+
+    .logo-text-main {
+        font-size: 28px;
+        letter-spacing: 3px;
+        height: 35px;
+        line-height: 35px;
+    }
+
+    .logo-text-sub {
+        font-size: 10px;
+        letter-spacing: 1px;
+        height: 15px;
+        line-height: 15px;
+    }
+
+    .header-line {
+        margin: 5px 0 10px;
+    }
+
+    /* ページ見出しのモバイル対応 */
+    .page-title {
+        font-size: 28px;
+        padding-left: 30px;
+        white-space: normal;
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    .page-title.typing {
+        animation: none !important;
+        width: auto !important;
+        white-space: normal;
+        border-right: none;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .section-subtitle {
+        font-size: 12px;
+    }
+
+    .frame-heading {
+        font-size: 11px;
+        padding: 10px 20px;
+    }
+
+    .hero-title {
+        font-size: 24px;
+    }
+
+    /* フレーム・コンテナのモバイル対応 */
+    .frame {
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .frame-content {
+        padding: 20px;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    /* セクション余白の調整 */
+    .skills-section {
+        padding: 60px 0;
+    }
 }
 
 @media (max-width: 576px) {
@@ -1193,6 +1275,68 @@ footer {
 
     nav a {
         margin: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-text-main {
+        font-size: 24px;
+        letter-spacing: 2px;
+        height: 30px;
+        line-height: 30px;
+    }
+
+    .logo-text-sub {
+        font-size: 9px;
+    }
+
+    .page-title {
+        font-size: 24px;
+        padding-left: 25px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .section-subtitle {
+        font-size: 11px;
+    }
+
+    .hero-title {
+        font-size: 20px;
+    }
+
+    .frame-heading {
+        font-size: 11px;
+        padding: 8px 15px;
+    }
+
+    .service-text {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    /* セクション・ヘッダーの余白削減 */
+    .skills-section {
+        padding: 40px 0;
+    }
+
+    .section-header {
+        margin-bottom: 20px;
+    }
+
+    .logo-container {
+        height: 50px;
+    }
+
+    .logo-text-main {
+        font-size: 22px;
+        height: 28px;
+        line-height: 28px;
     }
 }
 
@@ -1360,30 +1504,6 @@ footer {
     overflow: hidden;
 }
 
-.page-title {
-    font-family: var(--font-mono);
-    font-size: 32px;
-    color: var(--color-primary);
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    position: relative;
-    display: inline-block;
-}
-
-.page-title::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(to right,
-            var(--color-primary) 0%,
-            rgba(38, 218, 253, 0.5) 50%,
-            rgba(38, 218, 253, 0) 100%);
-    box-shadow: var(--glow);
-}
 
 .contact-container {
     border: 1px solid var(--color-primary);
@@ -2499,47 +2619,6 @@ textarea.form-input {
 
 /* Aboutページ用レスポンシブ対応 */
 @media (max-width: 768px) {
-    .header {
-        padding: 10px 0;
-    }
-
-    .logo-container {
-        height: 60px;
-        margin-bottom: 5px;
-    }
-
-    .logo-text-main {
-        font-size: 28px;
-        letter-spacing: 3px;
-        height: 35px;
-        line-height: 35px;
-    }
-
-    .logo-text-sub {
-        font-size: 10px;
-        letter-spacing: 1px;
-        height: 15px;
-        line-height: 15px;
-    }
-
-    .header-line {
-        margin: 5px 0 10px;
-    }
-
-    nav {
-        margin-top: 5px;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 5px;
-    }
-
-    nav a {
-        padding: 4px 8px;
-        margin: 0 2px;
-        font-size: 10px;
-        letter-spacing: 1px;
-    }
-
     .team-member {
         text-align: center;
     }
@@ -2559,37 +2638,6 @@ textarea.form-input {
 
     .achievement-year {
         margin-bottom: 0.5rem;
-    }
-
-    /* 見出しとフレームの調整 */
-    .page-title {
-        font-size: 28px !important;
-        padding-left: 30px !important;
-        white-space: normal !important;
-        display: block !important;
-        width: 100% !important;
-        text-align: left !important;
-    }
-
-    .page-title.typing {
-        animation: none !important;
-        width: auto !important;
-        white-space: normal !important;
-        border-right: none !important;
-    }
-
-    .section-title {
-        font-size: 24px !important;
-    }
-
-    .frame {
-        max-width: 100% !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-    }
-
-    .frame-content {
-        padding: 20px !important;
     }
 }
 
