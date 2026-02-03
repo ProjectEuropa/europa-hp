@@ -1,10 +1,12 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import CyberCard from '@/components/ui/CyberCard';
 import SectionTitle from '@/components/ui/SectionTitle';
 
 export default function ContactPage() {
+    const router = useRouter();
     const [formState, setFormState] = useState({
         name: '',
         email: '',
@@ -12,6 +14,8 @@ export default function ContactPage() {
         file: null as File | null,
     });
     const [showConfirm, setShowConfirm] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitError, setSubmitError] = useState<string | null>(null);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
@@ -29,13 +33,22 @@ export default function ContactPage() {
         setShowConfirm(true);
     };
 
-    const submitToNetlify = () => {
-        // Native submit to let Netlify handle it
-        // The "real" submission happens after confirmation via the confirm modal.
-        // Using submit() instead of requestSubmit() to avoid re-triggering onSubmit handler
-        const realForm = document.getElementById('contactForm') as HTMLFormElement;
-        if (realForm) {
-            realForm.submit();
+    const submitToNetlify = async () => {
+        setIsSubmitting(true);
+        setSubmitError(null);
+        try {
+            const realForm = document.getElementById('contactForm') as HTMLFormElement;
+            const formData = new FormData(realForm);
+            const response = await fetch('/contact', {
+                method: 'POST',
+                body: formData,
+            });
+            if (!response.ok) throw new Error('送信に失敗しました');
+            router.push('/contact/success');
+        } catch (error) {
+            setSubmitError(error instanceof Error ? error.message : '送信中にエラーが発生しました');
+        } finally {
+            setIsSubmitting(false);
         }
     };
 
@@ -187,20 +200,28 @@ export default function ContactPage() {
                                     </div>
                                 </div>
 
+                                {submitError && (
+                                    <div className="text-red-500 text-sm text-center font-mono border border-red-500/50 bg-red-500/10 p-3 rounded">
+                                        {submitError}
+                                    </div>
+                                )}
+
                                 <div className="flex justify-center gap-6 mt-6">
                                     <button
                                         type="button"
                                         onClick={() => setShowConfirm(false)}
-                                        className="px-6 py-2 border border-gray-600 text-gray-400 hover:border-white hover:text-white transition-all duration-300 font-mono text-sm"
+                                        disabled={isSubmitting}
+                                        className="px-6 py-2 border border-gray-600 text-gray-400 hover:border-white hover:text-white transition-all duration-300 font-mono text-sm disabled:opacity-50 disabled:cursor-not-allowed"
                                     >
                                         CANCEL
                                     </button>
                                     <button
                                         type="button"
                                         onClick={submitToNetlify}
-                                        className="px-6 py-2 bg-cyber-blue/20 border border-cyber-blue text-cyber-blue hover:bg-cyber-blue hover:text-cyber-black transition-all duration-300 font-bold tracking-widest uppercase shadow-[0_0_10px_rgba(38,218,253,0.3)] text-sm"
+                                        disabled={isSubmitting}
+                                        className="px-6 py-2 bg-cyber-blue/20 border border-cyber-blue text-cyber-blue hover:bg-cyber-blue hover:text-cyber-black transition-all duration-300 font-bold tracking-widest uppercase shadow-[0_0_10px_rgba(38,218,253,0.3)] text-sm disabled:opacity-50 disabled:cursor-not-allowed"
                                     >
-                                        <span className="mr-2">&gt;</span> SEND
+                                        <span className="mr-2">&gt;</span> {isSubmitting ? 'TRANSMITTING...' : 'SEND'}
                                     </button>
                                 </div>
                             </div>
