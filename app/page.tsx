@@ -47,8 +47,10 @@ export default function Home() {
               <div className="border border-cyber-blue/30 p-5 hover:border-cyber-blue transition-colors duration-300 bg-cyber-black/40">
                 <h3 className="text-cyber-blue font-bold mb-2">コンシューマー向けライフスタイルプラットフォーム</h3>
                 <p className="text-sm mb-3">Google Cloud & Laravelを基盤とした大規模ユーザー向けプラットフォーム開発。高いスケーラビリティを実現するためCI/CD、IaCなどモダンなDevOpsを導入。</p>
-                <div className="text-xs font-mono text-cyber-light opacity-80 border-t border-cyber-blue/20 pt-2">
-                  Cloud Run / Terraform / GitHub Actions / Laravel 12.x
+                <div className="flex flex-wrap gap-2 justify-center border-t border-cyber-blue/20 pt-3">
+                  {['Cloud Run', 'Terraform', 'GitHub Actions', 'Laravel 12.x'].map(tag => (
+                    <span key={tag} className="text-xs px-2 py-1 bg-cyber-blue/10 border border-cyber-blue/30 text-cyber-blue rounded font-mono">{tag}</span>
+                  ))}
                 </div>
               </div>
 
@@ -56,8 +58,10 @@ export default function Home() {
               <div className="border border-cyber-blue/30 p-5 hover:border-cyber-blue transition-colors duration-300 bg-cyber-black/40">
                 <h3 className="text-cyber-blue font-bold mb-2">大規模データ検索エンジン</h3>
                 <p className="text-sm mb-3">AWS ECS & Auroraを活用し、数百万件のレコードをサブ秒レイテンシで処理する高性能なエンタープライズ向け検索システムを開発。</p>
-                <div className="text-xs font-mono text-cyber-light opacity-80 border-t border-cyber-blue/20 pt-2">
-                  AWS ECS / Aurora / AWS CDK / Next.js
+                <div className="flex flex-wrap gap-2 justify-center border-t border-cyber-blue/20 pt-3">
+                  {['AWS ECS', 'Aurora', 'AWS CDK', 'Next.js'].map(tag => (
+                    <span key={tag} className="text-xs px-2 py-1 bg-cyber-blue/10 border border-cyber-blue/30 text-cyber-blue rounded font-mono">{tag}</span>
+                  ))}
                 </div>
               </div>
 
@@ -65,8 +69,10 @@ export default function Home() {
               <div className="border border-cyber-blue/30 p-5 hover:border-cyber-blue transition-colors duration-300 bg-cyber-black/40">
                 <h3 className="text-cyber-blue font-bold mb-2">新卒技術研修講師</h3>
                 <p className="text-sm mb-3">新卒エンジニア向けの技術研修講師として、クラウドアーキテクチャ、バックエンド開発、DevOpsのベストプラクティスを指導。</p>
-                <div className="text-xs font-mono text-cyber-light opacity-80 border-t border-cyber-blue/20 pt-2">
-                  Technical Leadership / Mentoring / Curriculum Design
+                <div className="flex flex-wrap gap-2 justify-center border-t border-cyber-blue/20 pt-3">
+                  {['Technical Leadership', 'Mentoring', 'Curriculum Design'].map(tag => (
+                    <span key={tag} className="text-xs px-2 py-1 bg-cyber-blue/10 border border-cyber-blue/30 text-cyber-blue rounded font-mono">{tag}</span>
+                  ))}
                 </div>
               </div>
             </div>
