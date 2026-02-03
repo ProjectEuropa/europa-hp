@@ -143,6 +143,29 @@ export default function AboutPage() {
                 </CyberCard>
             </section>
 
+            {/* Training & Education */}
+            <section className="mb-12">
+                <CyberCard title="Training & Education">
+                    <SectionTitle title="Training & Education" subtitle="研修・教育" />
+                    <div className="space-y-6">
+                        <div className="border border-cyber-blue/30 p-5 rounded bg-cyber-blue/5">
+                            <div className="flex justify-between items-start mb-2">
+                                <h3 className="text-lg font-bold text-cyber-blue">大手企業向け新卒エンジニア研修講師</h3>
+                                <span className="text-xs font-mono text-cyber-light bg-cyber-blue/10 px-2 py-1 rounded">2024-現在</span>
+                            </div>
+                            <p className="text-sm mb-3 text-foreground/80">大手重工業系企業、大手通信企業、大手データ分析企業、大手飲料メーカーなど、複数の大手企業にて新卒エンジニア向けの技術研修を担当。</p>
+                            <div className="flex flex-wrap gap-2">
+                                {['AWS', '生成AI'].map(skill => (
+                                    <span key={skill} className="text-xs px-2 py-1 bg-cyber-blue/10 border border-cyber-blue/30 text-cyber-blue rounded font-mono">
+                                        {skill}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </CyberCard>
+            </section>
+
             {/* Achievements Highlights (Link to Portfolio) */}
             <section className="mb-12">
                 <CyberCard title="Achievements">

@@ -115,15 +115,13 @@
 }
 
 :root {
-  --background: #021114;
-  --foreground: #7efbfd;
-  --cyber-blue: #26dafd;
+  /* --cyber-shadow is used by @utility blocks below */
   --cyber-shadow: 0 0 20px rgba(38, 218, 253, 0.4);
 }
 
 body {
-  background-color: var(--background);
-  color: var(--foreground);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
   font-family: var(--font-sans);
   line-height: 1.6;
   min-height: 100vh;

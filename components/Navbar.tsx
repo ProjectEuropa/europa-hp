@@ -42,7 +42,7 @@ export default function Navbar() {
                             <div className="font-mono text-3xl md:text-5xl font-normal text-cyber-blue tracking-[4px] md:tracking-[6px] uppercase text-shadow-[0_0_12px_#26dafd] mb-1 md:mb-2 h-auto md:h-[60px] leading-normal md:leading-[60px] animate-typing overflow-hidden whitespace-nowrap block">
                                 EUROPA
                             </div>
-                            <div className="font-sans text-xs md:text-base font-light text-foreground tracking-[1px] md:tracking-[2px] uppercase opacity-80 h-auto md:h-5 leading-normal md:leading-5 animate-typing overflow-hidden whitespace-nowrap block delay-500">
+                            <div className="font-sans text-xs md:text-base font-light text-foreground tracking-[1px] md:tracking-[2px] uppercase opacity-80 h-auto md:h-5 leading-normal md:leading-5 animate-typing overflow-hidden whitespace-nowrap block" style={{ animationDelay: '500ms' }}>
                                 Exploration Mission Interface
                             </div>
                         </div>

@@ -42,4 +42,4 @@ Next.js 16 App Router with TypeScript and Tailwind CSS v4:
 
 ## Legacy
 
-The original static HTML/CSS/JS site is archived in `_legacy_backup/` for reference.
+The original static HTML/CSS/JS site can be referenced from Git history prior to the Next.js migration.

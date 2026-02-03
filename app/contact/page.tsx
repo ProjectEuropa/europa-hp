@@ -29,13 +29,9 @@ export default function ContactPage() {
         setShowConfirm(true);
     };
 
-    const submitToNetlify = (e: React.FormEvent) => {
-        const form = e.target as HTMLFormElement;
-        // Native submit to let Netlify handle it, or use fetch
-        // If using native submit, we just remove preventDefault in the real form
-        // But we need to mimic the confirm modal.
-        // So the "real" submission happens after confirmation.
-        // We can submit the form programmatically.
+    const submitToNetlify = () => {
+        // Native submit to let Netlify handle it
+        // The "real" submission happens after confirmation via the confirm modal.
         const realForm = document.getElementById('contactForm') as HTMLFormElement;
         if (realForm) {
             realForm.submit();
