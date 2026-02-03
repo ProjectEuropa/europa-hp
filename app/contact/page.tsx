@@ -32,10 +32,10 @@ export default function ContactPage() {
     const submitToNetlify = () => {
         // Native submit to let Netlify handle it
         // The "real" submission happens after confirmation via the confirm modal.
-        // Using requestSubmit() to run constraint validation and native submit handlers
+        // Using submit() instead of requestSubmit() to avoid re-triggering onSubmit handler
         const realForm = document.getElementById('contactForm') as HTMLFormElement;
         if (realForm) {
-            realForm.requestSubmit();
+            realForm.submit();
         }
     };
 
