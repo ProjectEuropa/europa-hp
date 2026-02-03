@@ -51,10 +51,16 @@ export default function ContactPage() {
                 });
             } else {
                 // テキストのみの場合は公式ドキュメントの推奨形式で送信
+                const params = new URLSearchParams();
+                for (const [key, value] of formData.entries()) {
+                    if (typeof value === 'string') {
+                        params.append(key, value);
+                    }
+                }
                 response = await fetch('/__forms.html', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body: new URLSearchParams(formData as unknown as Record<string, string>).toString(),
+                    body: params.toString(),
                 });
             }
             if (!response.ok) throw new Error('送信に失敗しました');
