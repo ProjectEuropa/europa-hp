@@ -1235,10 +1235,6 @@ footer {
         padding: 10px 20px;
     }
 
-    .hero-title {
-        font-size: 24px;
-    }
-
     /* フレーム・コンテナのモバイル対応 */
     .frame {
         max-width: 100%;
@@ -1279,13 +1275,6 @@ footer {
 }
 
 @media (max-width: 480px) {
-    .logo-text-main {
-        font-size: 24px;
-        letter-spacing: 2px;
-        height: 30px;
-        line-height: 30px;
-    }
-
     .logo-text-sub {
         font-size: 9px;
     }
@@ -1304,7 +1293,7 @@ footer {
     }
 
     .hero-title {
-        font-size: 20px;
+        font-size: 14px;
     }
 
     .frame-heading {
@@ -1335,6 +1324,7 @@ footer {
 
     .logo-text-main {
         font-size: 22px;
+        letter-spacing: 2px;
         height: 28px;
         line-height: 28px;
     }
