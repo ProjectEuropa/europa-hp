@@ -99,7 +99,7 @@ const recentProjects: ProjectItem[] = [
 const technicalAchievements: AchievementItem[] = [
 	{
 		title: "レガシーシステムのモダナイゼーション",
-		desc: "PHP7.0からPHP8.4へのアップグレード、Laravel5.1からLaravel12.xへのマイグレーション、Vue.js2からNext.jsへのリプレイスを実施。レガシーシステムを最新技術でリニューアルし、パフォーマンスとセキュリティを大幅に向上。",
+		desc: "PHP7.0からPHP8.4へのアップグレード、Laravel5.1からLaravel12.xへのマイグレーション、Vue.js2からNext.jsへのリプレイス。レガシーシステムを最新技術でリニューアルし、パフォーマンスとセキュリティを大幅に向上。",
 		tech: [
 			"PHP 8.4",
 			"Laravel 11.x",
