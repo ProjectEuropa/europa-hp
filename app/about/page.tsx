@@ -1,6 +1,7 @@
 import Link from "next/link";
 import CyberCard from "@/components/ui/CyberCard";
 import SectionTitle from "@/components/ui/SectionTitle";
+import TechTag from "@/components/ui/TechTag";
 
 export const metadata = {
 	title: "About - Project Europa",
@@ -121,12 +122,7 @@ export default function AboutPage() {
 								"Ruby",
 								"Ruby on Rails",
 							].map((skill) => (
-								<span
-									key={skill}
-									className="text-xs px-2 py-1 bg-cyber-blue/10 border border-cyber-blue/30 text-cyber-blue rounded font-mono"
-								>
-									{skill}
-								</span>
+								<TechTag key={skill}>{skill}</TechTag>
 							))}
 						</div>
 					</div>
@@ -206,12 +202,7 @@ export default function AboutPage() {
 							</p>
 							<div className="flex flex-wrap gap-2 justify-center">
 								{["AWS", "生成AI"].map((skill) => (
-									<span
-										key={skill}
-										className="text-xs px-2 py-1 bg-cyber-blue/10 border border-cyber-blue/30 text-cyber-blue rounded font-mono"
-									>
-										{skill}
-									</span>
+									<TechTag key={skill}>{skill}</TechTag>
 								))}
 							</div>
 						</div>
@@ -246,12 +237,7 @@ export default function AboutPage() {
 									"Laravel 12.x",
 									"PHP",
 								].map((skill) => (
-									<span
-										key={skill}
-										className="text-xs px-2 py-1 bg-cyber-blue/10 border border-cyber-blue/30 text-cyber-blue rounded font-mono"
-									>
-										{skill}
-									</span>
+									<TechTag key={skill}>{skill}</TechTag>
 								))}
 							</div>
 						</div>
@@ -278,12 +264,7 @@ export default function AboutPage() {
 									"Next.js 13.x",
 									"Redis",
 								].map((skill) => (
-									<span
-										key={skill}
-										className="text-xs px-2 py-1 bg-cyber-blue/10 border border-cyber-blue/30 text-cyber-blue rounded font-mono"
-									>
-										{skill}
-									</span>
+									<TechTag key={skill}>{skill}</TechTag>
 								))}
 							</div>
 						</div>
