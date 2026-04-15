@@ -5,7 +5,7 @@ import TechTag from "@/components/ui/TechTag";
 export const metadata = {
   title: "Skills - Project Europa",
   description:
-    "Team Project Europaの技術スキルと認定資格一覧。AWS全12資格、Google Cloud 6資格を保有。",
+    "Team Project Europaの技術スキルと認定資格一覧。AWS全12資格、Google Cloud 7資格を保有。",
 };
 
 // Skill Data Types
@@ -132,6 +132,14 @@ const gcpCerts: CertItem[] = [
       "M20,19V7H4V19H20M20,3A2,2 0 0,1 22,5V19A2,2 0 0,1 20,21H4A2,2 0 0,1 2,19V5C2,3.89 2.9,3 4,3H20M13,17V15H18V17H13M9.58,13L5.57,9H8.4L11.7,12.3C12.09,12.69 12.09,13.33 11.7,13.72L8.42,17H5.59L9.58,13Z",
   },
   {
+    title: "Professional Cloud DevOps Engineer",
+    desc: "Professional certification for implementing DevOps practices, SRE principles, and CI/CD pipelines on Google Cloud.",
+    descJp:
+      "Google CloudインフラストラクチャにおけるDevOps実践、SRE原則、CI/CDパイプラインの実装に関する専門的なスキルを認定。",
+    iconPath:
+      "M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M16,6L14.5,8.5L17,11H14V13H17L14.5,15.5L16,18L21,12L16,6M8,6L3,12L8,18L9.5,15.5L7,13H10V11H7L9.5,8.5L8,6Z",
+  },
+  {
     title: "Associate Cloud Engineer",
     desc: "Certified to deploy applications, monitor operations, and manage enterprise solutions on Google Cloud.",
     descJp:
@@ -140,12 +148,12 @@ const gcpCerts: CertItem[] = [
       "M12,7V4H8V7H5V11H8V14H5V18H8V21H12V18H15V21H19V18H22V14H19V11H22V7H19V4H15V7H12M12,11H15V14H12V11Z",
   },
   {
-    title: "Professional Cloud DevOps Engineer",
-    desc: "Professional certification for implementing DevOps practices, SRE principles, and CI/CD pipelines on Google Cloud.",
+    title: "Data Practitioner",
+    desc: "Certification demonstrating skills in data engineering, analysis, and management on Google Cloud.",
     descJp:
-      "Google CloudインフラストラクチャにおけるDevOps実践、SRE原則、CI/CDパイプラインの実装に関する専門的なスキルを認定。",
+      "Google Cloud上でのデータエンジニアリング、データ分析、データ管理に関するスキルを証明する認定資格。",
     iconPath:
-      "M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M16,6L14.5,8.5L17,11H14V13H17L14.5,15.5L16,18L21,12L16,6M8,6L3,12L8,18L9.5,15.5L7,13H10V11H7L9.5,8.5L8,6Z",
+      "M12,3C7.58,3 4,4.79 4,7C4,9.21 7.58,11 12,11C16.42,11 20,9.21 20,7C20,4.79 16.42,3 12,3M4,9V12C4,14.21 7.58,16 12,16C16.42,16 20,14.21 20,12V9C20,11.21 16.42,13 12,13C7.58,13 4,11.21 4,9M4,14V17C4,19.21 7.58,21 12,21C16.42,21 20,19.21 20,17V14C20,16.21 16.42,18 12,18C7.58,18 4,16.21 4,14Z",
   },
   {
     title: "Generative AI Leader",
@@ -293,8 +301,61 @@ export default function SkillPage() {
             subtitle="Google Cloud認定資格"
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {gcpCerts.map((cert, index) => (
+          {/* Row 1: Professional certs (3 items) */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            {gcpCerts.slice(0, 3).map((cert, index) => (
+              <div
+                key={index}
+                className="bg-cyber-black/40 border border-cyber-blue/20 p-6 rounded hover:border-cyber-blue hover:shadow-[0_0_15px_rgba(38,218,253,0.3)] transition-all duration-300 flex flex-col items-center text-center group"
+              >
+                <div className="w-16 h-16 bg-cyber-blue/10 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 border border-cyber-blue/30 group-hover:border-cyber-blue">
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="w-8 h-8 text-cyber-blue group-hover:text-white transition-colors duration-300"
+                    fill="currentColor"
+                  >
+                    <path d={cert.iconPath} />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold text-cyber-blue mb-2">
+                  {cert.title}
+                </h3>
+                <p className="text-sm opacity-70 mb-2">{cert.desc}</p>
+                <p className="text-xs text-cyber-light border-t border-cyber-blue/20 pt-2 w-full">
+                  {cert.descJp}
+                </p>
+              </div>
+            ))}
+          </div>
+          {/* Row 2: Associate + Data Practitioner (2 items, centered) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 lg:w-2/3 lg:mx-auto">
+            {gcpCerts.slice(3, 5).map((cert, index) => (
+              <div
+                key={index}
+                className="bg-cyber-black/40 border border-cyber-blue/20 p-6 rounded hover:border-cyber-blue hover:shadow-[0_0_15px_rgba(38,218,253,0.3)] transition-all duration-300 flex flex-col items-center text-center group"
+              >
+                <div className="w-16 h-16 bg-cyber-blue/10 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 border border-cyber-blue/30 group-hover:border-cyber-blue">
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="w-8 h-8 text-cyber-blue group-hover:text-white transition-colors duration-300"
+                    fill="currentColor"
+                  >
+                    <path d={cert.iconPath} />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold text-cyber-blue mb-2">
+                  {cert.title}
+                </h3>
+                <p className="text-sm opacity-70 mb-2">{cert.desc}</p>
+                <p className="text-xs text-cyber-light border-t border-cyber-blue/20 pt-2 w-full">
+                  {cert.descJp}
+                </p>
+              </div>
+            ))}
+          </div>
+          {/* Row 3: Generative AI Leader + Cloud Digital Leader (2 items, centered) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:w-2/3 lg:mx-auto">
+            {gcpCerts.slice(5).map((cert, index) => (
               <div
                 key={index}
                 className="bg-cyber-black/40 border border-cyber-blue/20 p-6 rounded hover:border-cyber-blue hover:shadow-[0_0_15px_rgba(38,218,253,0.3)] transition-all duration-300 flex flex-col items-center text-center group"
